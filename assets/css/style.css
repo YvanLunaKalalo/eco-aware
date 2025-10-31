@@ -29,7 +29,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 35px;
+    padding: 10px 20px;
+    margin-right: 40px;
 }
 
 .logo {
@@ -62,25 +63,33 @@ nav {
     font-size: 1.8em;
     cursor: pointer;
     color: #0077b6;
+    user-select: none;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
+    /* Show hamburger */
     .menu-icon {
         display: block;
     }
 
+    /* Hide links until menu is opened */
     .nav-links {
         display: none;
         flex-direction: column;
         background-color: #f4f4f4;
         position: absolute;
-        top: 60px;
+        top: 75px;
         right: 0;
         width: 200px;
         padding: 10px;
         border-radius: 0 0 5px 5px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        margin-right: 40px;
+        margin-right: 50px;
     }
 
     .nav-links.active {
